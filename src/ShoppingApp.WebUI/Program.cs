@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 if (!builder.Environment.IsDevelopment())
 {
     var azureBlobStorageFobWebUiUri = GlobalConfig.AzureBlobStorageFobWebUiUri;
-    var azureKeyVaultFobWebUiUri = GlobalConfig.AzureKeyVaultFobWebUiUri;
+    var azureKeyVaultFobWebUiUri = GlobalConfig.AzureKeyVaultForWebUiUri;
 
     builder.UseCentralizedKeys(azureBlobStorageFobWebUiUri, azureKeyVaultFobWebUiUri);
 

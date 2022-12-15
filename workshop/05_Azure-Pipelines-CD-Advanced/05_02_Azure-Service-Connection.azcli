@@ -1,0 +1,3 @@
+# New Azure service connection
+# Name: DefaultAzureServiceConnection
+az ad sp create-for-rbac --name Azure-DevOps-Immersion

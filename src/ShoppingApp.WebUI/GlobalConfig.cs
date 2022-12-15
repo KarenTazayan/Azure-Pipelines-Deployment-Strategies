@@ -12,7 +12,7 @@ public static class GlobalConfig
         Environment.GetEnvironmentVariable(EnvironmentVariables.AzureBlobStorageFobWebUiUri) ??
         string.Empty;
 
-    public static string AzureKeyVaultFobWebUiUri =>
+    public static string AzureKeyVaultForWebUiUri =>
         Environment.GetEnvironmentVariable(EnvironmentVariables.AzureKeyVaultFobWebUiUri) ??
         string.Empty;
 
