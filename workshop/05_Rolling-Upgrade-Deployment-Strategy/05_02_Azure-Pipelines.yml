@@ -1,7 +1,5 @@
 # https://aka.ms/yaml
 variables:
-  # d - development a - advanced => da
-  nameSuffix: 'da1'
   appNamePrefix: 'shoppingapp'
 
 trigger:
@@ -195,7 +193,7 @@ stages:
       name: Default
     variables:
       # Staging 'sa1, sa2 sa3, ...'
-      # d - staging a - advanced => sa
+      # s - staging a - advanced => sa
       nameSuffix: 'sa1'
     environment: 'Staging'
     strategy: 
