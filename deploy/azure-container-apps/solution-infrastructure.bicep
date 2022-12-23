@@ -177,7 +177,7 @@ resource appi 'Microsoft.Insights/components@2020-02-02' = {
   }
 }
 
-resource vnet 'Microsoft.Network/virtualNetworks@2021-05-01' = {
+resource vnet 'Microsoft.Network/virtualNetworks@2022-05-01' = {
   name: vnetName
   location: location
   tags: tags
@@ -191,7 +191,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2021-05-01' = {
       {
         name: 'ShoppingApp'
         properties: {
-          addressPrefix: '10.0.0.0/22'
+          addressPrefix: '10.0.0.0/21'
         }
       }
     ]
@@ -255,7 +255,6 @@ resource shoppingAppCae 'Microsoft.App/managedEnvironments@2022-03-01' = {
   properties: {
     vnetConfiguration: {
       infrastructureSubnetId: vnet.properties.subnets[0].id
-      runtimeSubnetId: vnet.properties.subnets[0].id
     }
     zoneRedundant: false
   }
