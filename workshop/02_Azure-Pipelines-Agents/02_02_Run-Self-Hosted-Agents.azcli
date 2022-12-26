@@ -1,7 +1,7 @@
 # Run a self-hosted agent in Docker: 
 # https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/docker
 
-# Create Azure DevOps Personal Access Tokens. Sample name: OnDemandBuildAgents
+# Create Azure DevOps Personal Access Tokens. Sample name: DevOps-Workshop-8
 # For the scope select: Agent Pools (read, manage), Deployment group (read, manage).
 # qgc74oyl4fgjmlsvtqitvehplqbj2xzucbecvoos6wvry5gkeqsa
 
@@ -10,17 +10,17 @@
 # Warning!!! Doing this has serious security implications. 
 # The code inside the container can now run as root on your Docker host.
 docker run -v /var/run/docker.sock:/var/run/docker.sock `
-    -e AZP_URL=https://dev.azure.com/devops-workshop-4 `
+    -e AZP_URL=https://dev.azure.com/devops-workshop-8 `
     -e AZP_TOKEN=<PAT token> -e AZP_AGENT_NAME=01_Ubuntu-20.04 `
     -e AZP_POOL=Default -e AZP_WORK=_work `
-    --name DevOps-Workshop-4_01_Ubuntu-20.04 asynchub/azure-pipelines-agents-ubuntu-20.04:12142022
+    --name DevOps-Workshop-8_01_Ubuntu-20.04 asynchub/azure-pipelines-agents-ubuntu-20.04:12142022
 
 # PowerShell Syntax
 # Use Docker within a Docker container
 # Warning!!! Doing this has serious security implications. 
 # The code inside the container can now run as root on your Docker host.
 docker run -v /var/run/docker.sock:/var/run/docker.sock `
-    -e AZP_URL=https://dev.azure.com/devops-workshop-4 `
+    -e AZP_URL=https://dev.azure.com/devops-workshop-8 `
     -e AZP_TOKEN=<PAT token> -e AZP_AGENT_NAME=01_Debian-10.13 `
     -e AZP_POOL=Default -e AZP_WORK=_work `
-    --name DevOps-Workshop-4_01_Debian-10.13 asynchub/azure-pipelines-agents-debian-10.13:12142022
+    --name DevOps-Workshop-8_01_Debian-10.13 asynchub/azure-pipelines-agents-debian-10.13:12142022

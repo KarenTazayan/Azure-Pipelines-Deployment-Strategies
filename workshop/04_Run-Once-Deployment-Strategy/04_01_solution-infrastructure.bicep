@@ -191,7 +191,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2022-05-01' = {
       {
         name: 'ShoppingApp'
         properties: {
-          addressPrefix: '10.0.0.0/22'
+          addressPrefix: '10.0.0.0/21'
         }
       }
     ]
