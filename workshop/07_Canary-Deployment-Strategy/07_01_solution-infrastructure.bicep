@@ -341,6 +341,18 @@ resource webUiCa 'Microsoft.App/containerApps@2022-03-01' = {
       ingress: {
         external: true
         targetPort: 80
+        traffic: [
+          {
+            latestRevision: true
+            weight: 5
+          }
+          {
+            label: 'v0-1-0-ci-8'
+            latestRevision: false
+            revisionName: '${webUiCaName}--v0-1-0-ci-8'
+            weight: 95
+          }
+        ]
       }
     }
     template: {
@@ -374,7 +386,7 @@ resource webUiCa 'Microsoft.App/containerApps@2022-03-01' = {
         }
       ]
       scale: {
-        minReplicas: 2
+        minReplicas: 1
         maxReplicas: 4
       }
     }
